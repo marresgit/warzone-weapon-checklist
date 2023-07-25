@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 # Steps i took when installing:
 - [x] ```npx create-next-app@latest .```
-- [x] ```nnpm i prisma --save-dev```
+- [x] ```npm i prisma --save-dev```
 - [x] ```npx prisma init --datasource-provider sqlite```
 - [x] Fix model in ```/prisma/schema.prisma```
 - [x] migrate ```npx prisma migrate dev init``` 
