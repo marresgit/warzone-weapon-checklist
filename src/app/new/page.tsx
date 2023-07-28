@@ -22,7 +22,7 @@ async function createTodo(data: FormData) {
 
     await prisma.todo.create({data: { attachment, weapon, level, complete: false}})
     redirect("/")
-    console.log("Server code")
+    console.log("------------------------------##OBS-----------#SERVER-CODE-------------------------------------------")
 }
 
 export default function Page() {
