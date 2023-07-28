@@ -2,9 +2,12 @@ import Link from "next/link";
 import {prisma} from "@/db";
 import {TodoItem} from "@/app/components/TodoItem";
 
+function getTodos() {
+    return prisma.todo.findMany()
+}
 
 export default async function Home() {
-    const todos = await prisma.todo.findMany()
+    const todos = await getTodos()
 
     return (
         <>
@@ -17,7 +20,6 @@ export default async function Home() {
                 </Link>
             </header>
             <div className="flex my-4 justify-center">
-                <div className={`bg-amber-700`}>tjena</div>
                 <div className={`rounded-lg bg-white py-8 px-6`}>
 
                     <h1 className={`text-2xl font-bold mb-10 text-center`}>Muzzle</h1>

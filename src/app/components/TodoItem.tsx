@@ -8,13 +8,11 @@ type TodoItemProps = {
 
 export function TodoItem({id, attachment, weapon, level, complete}: TodoItemProps) {
     return (
-
         <tr>
-            <input id={id} type="checkbox" className={`cursor-pointer peer`}/>
+            <td><label><input id={id} type="checkbox" className={`cursor-pointer peer`}/></label></td>
             <td htmlFor={id} className={`peer-checked:line-through`}>{attachment}</td>
             <td htmlFor={id} className={`peer-checked:line-through`}>{weapon}</td>
             <td htmlFor={id} className={`peer-checked:line-through`}>{level}</td>
-
         </tr>
     )
 }
