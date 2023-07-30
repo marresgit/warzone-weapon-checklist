@@ -31,6 +31,7 @@ export default function Page() {
             <header className={`flex justify-between items-center mb-4`}>
                 <h1 className={`text-2xl text-slate-200`}>New</h1>
             </header>
+
             <div className="flex my-4 justify-center">
                 <div className="rounded-lg bg-white py-8 px-6 ">
                     <form action={createTodo}>

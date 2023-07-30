@@ -10,9 +10,7 @@ async function toggleTodo(id: string, complete: boolean) {
     "use server"
 
     await prisma.todo.update({where: { id }, data: { complete }})
-
 }
-
 
 export default async function Home() {
     const todos = await getTodos()
@@ -27,18 +25,19 @@ export default async function Home() {
                     New
                 </Link>
             </header>
-            <div className="flex my-4 justify-center">
-                <div className={`rounded-lg bg-white py-8 px-6`}>
 
-                    <h1 className={`text-2xl font-bold mb-10 text-center`}>Muzzle</h1>
+            <div className="flex my-10">
+                <div className={`rounded-lg bg-white py-8 px-6 w-full`}>
 
-                    <table className={`table-auto text-slate-950`}>
+                    <h1 className={`text-2xl font-bold mb-10`}>Muzzle</h1>
+
+                    <table className={`table-auto text-slate-950 bg-white w-full`}>
                         <thead>
                         <tr>
-                            <th className={`pr-16 pb-2`}></th>
-                            <th className={`pr-16 pb-2`}>Attachement</th>
-                            <th className={`pr-16 pb-2`}>Weapon</th>
-                            <th className={`pr-16 pb-2`}>Level</th>
+                            <th className={`pr-16 pb-2 text-left`}></th>
+                            <th className={`pr-16 pb-2 text-left`}>Attachement</th>
+                            <th className={`pr-16 pb-2 text-left`}>Weapon</th>
+                            <th className={`pr-16 pb-2 text-left`}>Level</th>
                         </tr>
                         </thead>
                         <tbody>

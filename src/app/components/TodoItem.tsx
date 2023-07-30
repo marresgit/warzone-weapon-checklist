@@ -37,6 +37,11 @@ export function TodoItem({id, attachment, weapon, level, toggleTodo, complete}: 
                 className={`peer-checked:line-through`}>
                 {level}
             </td>
+            <td>
+                <button
+                    className={`bg-transparent bg-red-300 text-red-800 font-semibold py-1 px-4 border border-red-400 hover:bg-red-200 rounded`}>Delete
+                </button>
+            </td>
         </tr>
     )
 }
