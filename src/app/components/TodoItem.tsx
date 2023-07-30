@@ -1,5 +1,7 @@
 "use client"
 
+import {prisma} from "@/db";
+
 type TodoItemProps = {
     id: string
     attachment: string
@@ -7,9 +9,12 @@ type TodoItemProps = {
     level: string
     complete: boolean
     toggleTodo: (id: string, complete: boolean) => void
+    handleDelete: (id: string) => void
 }
 
-export function TodoItem({id, attachment, weapon, level, toggleTodo, complete}: TodoItemProps) {
+export function TodoItem({id, attachment, weapon, level, toggleTodo, handleDelete, complete}: TodoItemProps) {
+
+
     return (
         <tr>
             <td>
@@ -39,6 +44,7 @@ export function TodoItem({id, attachment, weapon, level, toggleTodo, complete}: 
             </td>
             <td>
                 <button
+                    onClick={e => handleDelete(id)}
                     className={`bg-transparent bg-red-300 text-red-800 font-semibold py-1 px-4 border border-red-400 hover:bg-red-200 rounded`}>Delete
                 </button>
             </td>

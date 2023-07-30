@@ -33,7 +33,7 @@ export default function Page() {
             </header>
 
             <div className="flex my-4 justify-center">
-                <div className="rounded-lg bg-white py-8 px-6 ">
+                <div className="rounded-lg bg-white py-8 px-6">
                     <form action={createTodo}>
                         <input
                             type="text"

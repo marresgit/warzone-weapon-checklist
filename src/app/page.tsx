@@ -8,8 +8,14 @@ function getTodos() {
 
 async function toggleTodo(id: string, complete: boolean) {
     "use server"
-
+    console.log(id)
     await prisma.todo.update({where: { id }, data: { complete }})
+}
+
+async function handleDelete(id: string) {
+    "use server"
+    console.log(id)
+    await prisma.todo.delete({where: {id}})
 }
 
 export default async function Home() {
@@ -43,7 +49,7 @@ export default async function Home() {
                         <tbody>
                         {todos.map(todo => (
 
-                            <TodoItem key={todo.id} {...todo} toggleTodo={toggleTodo} />
+                            <TodoItem key={todo.id} {...todo} toggleTodo={toggleTodo} handleDelete={handleDelete} />
                         ))}
                         </tbody>
                     </table>
