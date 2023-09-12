@@ -29,7 +29,7 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting
-      run: echo "Hello ${{ inputs.name }}"
+      run: echo "Hello ${{ inputs.name }} JOB 1111111111111111111111111111111111111111"
 
   greet2:
     # The type of runner that the job will run on
@@ -39,4 +39,4 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting to everyone
-      run: echo "Hello ${{ inputs.name }}"
+      run: echo "Hello ${{ inputs.name }} JOB 222222222222222222222222222222222222222"
