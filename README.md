@@ -10,7 +10,12 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 If you want to:
 - [] fix strikethrough when done, or change backgroundcolor on that item (https://stackoverflow.com/questions/65784357/tailwindcss-change-label-when-radio-button-checked)
-- [] test
+
+
+# What to do:
+- [ ] Create new Model (prisma table) for Users
+- [ ] Add NextAuth to login with Gmail
+
 ## Getting Started
 
 First, run the development server:
